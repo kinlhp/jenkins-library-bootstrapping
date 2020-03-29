@@ -1,4 +1,4 @@
-call(Map args) {
+def call(Map args) {
     name = args.name
-    echo (name == null || name.trim().isEmpty()) ? "Hello!" : "Hello ${name}!"
+    echo ((name == null || name.trim().isEmpty()) ? "Hello!" : "Hello ${name}!")
 }
