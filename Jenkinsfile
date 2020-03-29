@@ -7,15 +7,21 @@ pipeline {
         stage('load') {
             steps {
                 // It is best to refer to Pipeline Syntax for the precise syntax for your SCM: https://jenkins.io/doc/pipeline/steps/workflow-cps-global-lib
-                library identifier: 'bar@master', retriever: modernSCM([
-                    $class: 'git',
-                    remote: "${LIBRARY_REPOSITORY}"
+                library([
+                    identifier: 'bar@master',
+                    retriever: modernSCM([
+                        scm: [
+                            $class: 'GitSCMSource',
+                            remote: "${LIBRARY_REPOSITORY}"
+                        ]
+                    ])
                 ])
             }
         }
         stage('greet') {
             steps {
-                foo name: 'Steve'
+                foo([:])
+                foo([name: 'Steve'])
             }
         }
     }
