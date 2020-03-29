@@ -1,0 +1,8 @@
+= Dynamically loading shared Jenkins library
+
+
+
+== References
+- https://jenkins.io/doc/book/pipeline/shared-libraries#dynamic-retrieval[Extending with Shared Libraries].
+- https://plugins.jenkins.io/workflow-cps-global-lib[Pipeline: Shared Groovy Libraries].
+- https://jenkins.io/doc/pipeline/steps/workflow-cps-global-lib[Jenkins User Documentation].
