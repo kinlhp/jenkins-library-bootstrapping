@@ -14,8 +14,10 @@ pipeline {
             }
         }
         stage('greet') {
-            foo
-            foo name: 'Steve'
+            steps {
+                foo
+                foo name: 'Steve'
+            }
         }
     }
 }
