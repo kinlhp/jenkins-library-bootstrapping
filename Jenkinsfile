@@ -15,7 +15,6 @@ pipeline {
         }
         stage('greet') {
             steps {
-                foo
                 foo name: 'Steve'
             }
         }
